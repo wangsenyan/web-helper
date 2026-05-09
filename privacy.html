@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>网页小助手 — 隐私政策</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", sans-serif;
+            max-width: 780px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #1f2937;
+            line-height: 1.65;
+        }
+
+        h1 {
+            border-bottom: 2px solid #f97316;
+            padding-bottom: 8px;
+        }
+
+        h2 {
+            margin-top: 36px;
+            border-left: 4px solid #f97316;
+            padding-left: 10px;
+        }
+
+        code {
+            background: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.92em;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 14px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #e5e7eb;
+            padding: 8px 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #f9fafb;
+        }
+
+        .muted {
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+
+        a {
+            color: #f97316;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a class="back" href="./">← 返回首页</a>
+
+    <h1>网页小助手 — 隐私政策</h1>
+    <p class="muted">最后更新：2025-01-17</p>
+
+    <p>本隐私政策适用于"网页小助手"Chrome 扩展（以下简称"本扩展"）。请在使用前仔细阅读。如不同意本政策，请停止使用本扩展并卸载。</p>
+
+    <h2>1. 我们是谁</h2>
+
+    <p>本扩展由独立开发者开发与维护。联系方式：</p>
+    <ul>
+        <li>支持邮箱：<strong><a href="mailto:wangsenyan123@gmail.com">wangsenyan123@gmail.com</a></strong></li>
+    </ul>
+
+    <h2>2. 扩展的工作原理摘要</h2>
+    <p>本扩展在用户主动授权的网站上，为表单输入框旁注入一个"?"按钮。点击按钮时，会把该字段的上下文（字段名、提示文本、页面标题、页面局部正文等）与本地知识库的相关片段，发送到<strong>用户自己在设置中配置的大语言模型（LLM）服务</strong>，以获得填写建议。
+    </p>
+    <p>本扩展<strong>不设自有服务器</strong>。所有配置、知识库、答案缓存和会话记录仅保存在用户本地浏览器中。</p>
+
+    <h2>3. 我们收集与处理的数据</h2>
+
+    <h3>3.1 用户在本地创建的数据</h3>
+    <ul>
+        <li>用户填入的网站白名单（授权域名）。</li>
+        <li>用户填入的 LLM 服务 API Key、模型名称和可选 API Base URL。</li>
+        <li>用户主动创建的本地知识库（通过深度抓取、页面采集或本地文档导入生成的页面标题、URL 和正文片段）。</li>
+        <li>用户从本地上传的文档文本（.txt / .md / .html / .json / .csv / .docx / .pptx / .pdf）。</li>
+        <li>用户对回答的"有用 / 无用"反馈。</li>
+        <li>AI 助手会话历史（按浏览器会话保存，关闭浏览器后自动清除）。</li>
+    </ul>
+
+    <h3>3.2 每次查询时处理的数据</h3>
+    <ul>
+        <li>点击"?"按钮时：该字段的标签、占位符、页面标题、页面路径、局部页面上下文、知识库匹配片段。</li>
+        <li>打开 AI 助手对话时：用户输入的问题、对话历史（最近 8 条）、页面正文节选、用户主动附加的截图（可选）。</li>
+    </ul>
+
+    <h3>3.3 主动跳过的数据</h3>
+    <p>本扩展会<strong>主动跳过</strong>以下字段，不为其注入按钮，也不会把相关上下文发送给模型：</p>
+    <ul>
+        <li><code>input[type=password]</code>、<code>input[type=email]</code>、<code>input[type=tel]</code></li>
+        <li>含有"密码 / 验证码 / 令牌 / 密钥 / 银行卡 / 身份证 / 手机号 / 邮箱 / credit card / CVV / token / secret / api key / access
+            key"等关键词的标签、占位符、aria-label、自动填充标签。</li>
+        <li><code>autocomplete=password</code>、<code>autocomplete=one-time-code</code> 的字段。</li>
+    </ul>
+    <p>发送到模型的所有文本，还会先经过脱敏处理，自动替换邮箱、中国大陆手机号、身份证号、银行卡号、Bearer Token、API Key 形式为占位符。</p>
+
+    <h2>4. 数据的存储位置</h2>
+    <ul>
+        <li>所有用户数据保存在 Chrome 本地的 <code>chrome.storage.local</code> 和
+            <code>chrome.storage.session</code>（后者用于会话缓存，关闭浏览器即清空）。</li>
+        <li>扩展<strong>不会</strong>把上述数据上传到我们的任何服务器（因为我们没有服务器）。</li>
+    </ul>
+
+    <h2>5. 数据的传输与共享</h2>
+    <ul>
+        <li>当且仅当用户点击"?"按钮或向 AI 助手发问时，本扩展会把<strong>必要的字段上下文、页面局部正文、知识库片段、用户当前问题</strong>发送到用户<strong>自行在设置中配置的 LLM
+                服务</strong>（默认示例为 DeepSeek 的 <code>https://api.deepseek.com</code>）。</li>
+        <li>用户可在设置中更换为任意兼容 OpenAI Chat Completions 协议的服务。</li>
+        <li>除用户指定的 LLM 服务外，本扩展<strong>不与任何第三方共享数据</strong>。</li>
+        <li>本扩展<strong>不用于</strong>广告投放、用户画像、跨站追踪、售卖数据或任何形式的数据变现。</li>
+    </ul>
+
+    <h2>6. 权限用途说明</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>权限</th>
+                <th>用途</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>storage</code></td>
+                <td>本地保存用户配置、知识库、缓存、反馈、会话。</td>
+            </tr>
+            <tr>
+                <td><code>activeTab</code></td>
+                <td>在用户主动点击扩展图标时对当前标签页执行诊断或采集。</td>
+            </tr>
+            <tr>
+                <td><code>contextMenus</code></td>
+                <td>注册"AI 搜索：&lt;选中文字&gt;"右键菜单。</td>
+            </tr>
+            <tr>
+                <td><code>scripting</code></td>
+                <td>在用户授权的站点上动态注册内容脚本；没有用户授权则不注册。</td>
+            </tr>
+            <tr>
+                <td><code>tabs</code></td>
+                <td>记录用户最后访问的网页标签 ID / URL / 标题，以便 AI 助手在 popup 或新页面中恢复上下文。</td>
+            </tr>
+            <tr>
+                <td><code>unlimitedStorage</code></td>
+                <td>支持较大的本地知识库（用户抓取或导入的文档可能累计几十 MB）。</td>
+            </tr>
+            <tr>
+                <td><code>host_permissions: https://api.deepseek.com/*</code></td>
+                <td>调用默认示例的 LLM 服务。</td>
+            </tr>
+            <tr>
+                <td><code>optional_host_permissions: http://*/*, https://*/*</code></td>
+                <td>用户主动把站点加入白名单时，才向 Chrome 请求对应站点的访问权限。没有用户授权，扩展在任何网站上都不会注入脚本。</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>7. 数据保留与删除</h2>
+    <ul>
+        <li>答案缓存默认 7 天过期。</li>
+        <li>用户可随时在设置页清空答案缓存、删除单个知识库、移除白名单域名、清空对话历史。</li>
+        <li>浏览器关闭后，会话级对话历史自动清除。</li>
+        <li>卸载扩展将删除所有本地保存的数据。</li>
+    </ul>
+
+    <h2>8. 儿童隐私</h2>
+    <p>本扩展不针对 13 岁以下儿童设计，也不会有意收集儿童信息。</p>
+
+    <h2>9. 政策变更</h2>
+    <p>如本政策有重大变更，我们会在扩展的版本更新说明中公告。继续使用即视为接受新政策。</p>
+
+    <h2>10. 联系我们</h2>
+    <p>如对隐私有任何疑问，请通过 <a href="mailto:wangsenyan123@gmail.com">wangsenyan123@gmail.com</a> 联系。</p>
+
+</body>
+
+</html>

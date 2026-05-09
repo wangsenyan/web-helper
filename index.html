@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>网页小助手 · Web Helper</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Chrome 扩展,在授权网站的表单字段旁显示智能填写建议。本地知识库 + 自选大模型,权限最小化,数据不出浏览器。" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", sans-serif;
+            color: #1f2937;
+            line-height: 1.7;
+            background: #fff;
+        }
+
+        a {
+            color: #f97316;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            color: #fff;
+            padding: 80px 24px 60px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin: 0 0 16px;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 0 0 32px;
+            opacity: 0.95;
+        }
+
+        .hero .cta {
+            display: inline-block;
+            padding: 12px 32px;
+            background: #fff;
+            color: #ea580c;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 16px;
+            margin: 0 6px;
+        }
+
+        .hero .cta.secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        h2 {
+            font-size: 26px;
+            margin-top: 48px;
+            border-left: 4px solid #f97316;
+            padding-left: 12px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        .feature {
+            padding: 20px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+
+        .feature h3 {
+            margin: 0 0 8px;
+            font-size: 18px;
+            color: #ea580c;
+        }
+
+        .feature p {
+            margin: 0;
+            font-size: 14px;
+            color: #4b5563;
+        }
+
+        code {
+            background: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding: 24px;
+            border-top: 1px solid #e5e7eb;
+            text-align: center;
+            color: #9ca3af;
+            font-size: 14px;
+        }
+
+        .muted {
+            color: #6b7280;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+        <h1>网页小助手</h1>
+        <p>在授权网站的表单字段旁显示智能填写建议 · 本地知识库 + 自选大模型</p>
+        <a class="cta" href="https://chrome.google.com/webstore/">Chrome 商店安装（审核中）</a>
+        <a class="cta secondary" href="usage.html">使用文档</a>
+        <a class="cta secondary" href="privacy.html">隐私政策</a>
+    </section>
+
+    <div class="container">
+        <h2>为什么需要它</h2>
+        <p>每天要在各种后台/表单里填大量字段——抖店、拼多多、1688、CRM、ERP、工单系统……大部分字段的含义并不直观，规则文档散落在十几个帮助页。</p>
+        <p>网页小助手把你的产品手册、帮助文档打包成本地知识库，在你填表时用 AI 告诉你"这个字段应该填什么"，并给出可一键填入的候选值。</p>
+
+        <h2>核心特性</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>按需注入</h3>
+                <p>默认不在任何网站工作，只有把站点加入白名单后才启用。</p>
+            </div>
+            <div class="feature">
+                <h3>本地知识库</h3>
+                <p>支持深度抓取、页面采集和本地文档导入（txt / md / html / docx / pptx / pdf）。</p>
+            </div>
+            <div class="feature">
+                <h3>BM25 检索</h3>
+                <p>中文友好，不需要 Embedding，零推理成本。</p>
+            </div>
+            <div class="feature">
+                <h3>自带任意 LLM</h3>
+                <p>默认 DeepSeek，也可填任何兼容 OpenAI Chat Completions 协议的服务。支持流式和思考模式。</p>
+            </div>
+            <div class="feature">
+                <h3>AI 助手面板</h3>
+                <p>侧边对话，支持全屏/区域截图作为上下文。对话按浏览器会话存储。</p>
+            </div>
+            <div class="feature">
+                <h3>敏感字段过滤</h3>
+                <p>密码、验证码、邮箱、手机号、证件号、银行卡自动跳过，不注入也不上传。</p>
+            </div>
+        </div>
+
+        <h2>开始使用</h2>
+        <ol>
+            <li>从 Chrome 商店安装本扩展</li>
+            <li>进入"模型"设置页，粘贴你的 LLM API Key</li>
+            <li>进入"启用站点"，把要使用的域名加入白名单（Chrome 会弹权限确认）</li>
+            <li>（可选）进入"知识库"，抓取站点帮助页或导入本地手册</li>
+        </ol>
+
+        <h2>隐私</h2>
+        <p>本扩展<strong>没有任何自有服务器</strong>。所有配置、知识库、对话记录只保存在你本地浏览器里。只有当你主动点击"?"按钮或向 AI
+            助手发问时，扩展才会把字段上下文发到你自己配置的大模型服务，不经过我们。</p>
+        <p>详细条款：<a href="privacy.html">隐私政策</a>。</p>
+    </div>
+
+    <footer>
+        © <span id="year"></span> 网页小助手 ·
+        <a href="mailto:wangsenyan123@gmail.com">联系支持</a> ·
+        <a href="privacy.html">隐私政策</a>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    </footer>
+
+</body>
+
+</html>
