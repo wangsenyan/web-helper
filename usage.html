@@ -2,251 +2,126 @@
 <html lang="zh-CN">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>网页小助手 — 使用文档</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", sans-serif;
-            max-width: 880px;
-            margin: 40px auto;
-            padding: 0 20px;
-            color: #1f2937;
-            line-height: 1.7;
-        }
-
-        h1 {
-            border-bottom: 2px solid #f97316;
-            padding-bottom: 8px;
-        }
-
-        h2 {
-            margin-top: 40px;
-            border-left: 4px solid #f97316;
-            padding-left: 12px;
-        }
-
-        h3 {
-            margin-top: 24px;
-            color: #ea580c;
-        }
-
-        code {
-            background: #f3f4f6;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-size: 0.92em;
-        }
-
-        pre {
-            background: #1f2937;
-            color: #f9fafb;
-            padding: 14px;
-            border-radius: 6px;
-            overflow-x: auto;
-        }
-
-        pre code {
-            background: transparent;
-            color: inherit;
-            padding: 0;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 14px 0;
-        }
-
-        th,
-        td {
-            border: 1px solid #e5e7eb;
-            padding: 8px 10px;
-            text-align: left;
-            vertical-align: top;
-        }
-
-        th {
-            background: #f9fafb;
-        }
-
-        .tip {
-            background: #fff7ed;
-            border-left: 3px solid #f97316;
-            padding: 10px 14px;
-            border-radius: 4px;
-            margin: 14px 0;
-        }
-
-        .warn {
-            background: #fef2f2;
-            border-left: 3px solid #dc2626;
-            padding: 10px 14px;
-            border-radius: 4px;
-            margin: 14px 0;
-        }
-
-        a {
-            color: #f97316;
-        }
-
-        .back {
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-
-        ol>li {
-            margin: 8px 0;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>网页小助手 — 使用文档</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", sans-serif; max-width: 880px; margin: 40px auto; padding: 0 20px; color: #1f2937; line-height: 1.7; }
+    h1 { border-bottom: 2px solid #f97316; padding-bottom: 8px; }
+    h2 { margin-top: 40px; border-left: 4px solid #f97316; padding-left: 12px; }
+    h3 { margin-top: 24px; color: #ea580c; }
+    a { color: #ea580c; }
+    code { background: #f3f4f6; padding: 2px 6px; border-radius: 3px; }
+    pre { background: #1f2937; color: #f9fafb; padding: 14px; border-radius: 6px; overflow-x: auto; }
+    pre code { background: transparent; color: inherit; padding: 0; }
+    table { border-collapse: collapse; width: 100%; margin: 14px 0; }
+    th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background: #f9fafb; }
+    .tip { background: #fff7ed; border-left: 3px solid #f97316; padding: 10px 14px; border-radius: 4px; margin: 14px 0; }
+    .warn { background: #fef2f2; border-left: 3px solid #dc2626; padding: 10px 14px; border-radius: 4px; margin: 14px 0; }
+    .back { display: inline-block; margin-bottom: 20px; }
+    ol > li, ul > li { margin: 8px 0; }
+  </style>
 </head>
 
 <body>
+  <a class="back" href="./">返回首页</a>
 
-    <a class="back" href="./">← 返回首页</a>
+  <h1>网页小助手 — 使用文档</h1>
 
-    <h1>网页小助手 — 使用文档</h1>
+  <h2>一、安装与首次启用</h2>
+  <ol>
+    <li>从 Chrome Web Store 安装网页小助手。审核通过前，商店链接会显示为“审核中”。</li>
+    <li>打开你要使用的网站，例如公司后台、CRM、ERP、客服工作台或帮助中心。</li>
+    <li>点击 Chrome 右上角扩展图标，选择启用当前网站。</li>
+    <li>Chrome 弹出权限确认时，点允许。扩展只会在你授权的网站工作。</li>
+    <li>页面刷新后，左侧会出现网页小助手入口；配置模型前不会显示字段“?”提示。</li>
+  </ol>
 
-    <h2>一、安装</h2>
-    <ol>
-        <li>打开 Chrome 浏览器，访问 Chrome Web Store 并安装本扩展（审核通过后提供链接）。</li>
-        <li>安装完成后，浏览器右上角会出现扩展图标，建议点"固定"。</li>
-        <li>安装后会自动打开设置页。</li>
-    </ol>
+  <h2>二、配置模型</h2>
+  <ol>
+    <li>打开左侧网页小助手，点击设置按钮。</li>
+    <li>进入“模型”页，选择供应商并填写模型、Base URL 和 API Key。</li>
+    <li>点击“测试连接”。连接通过后，该模型配置才会生效。</li>
+    <li>可以添加多个模型，并选择一个默认模型。</li>
+  </ol>
+  <div class="tip">
+    API Key 只保存在本地浏览器。自定义模型 endpoint 会先请求对应 API origin 权限，未授权时不会调用。
+  </div>
 
-    <h2>二、配置模型（必做）</h2>
-    <ol>
-        <li>在设置页点"模型"tab。</li>
-        <li>默认卡片是 <strong>DeepSeek</strong>。在 <a href="https://platform.deepseek.com/api_keys" target="_blank"
-                rel="noopener">platform.deepseek.com/api_keys</a> 申请 API Key 后粘贴进来。</li>
-        <li>建议选择 <code>deepseek-v4-flash</code> 模型，思考模式 <strong>禁用</strong>（响应更快）。</li>
-        <li>勾选"流式返回"可以边生成边显示。</li>
-        <li>点"测试连接"，看到绿色"连接成功"即 OK。</li>
-        <li>点"保存"。</li>
-    </ol>
-    <div class="tip">
-        <strong>提示：</strong> 你也可以添加多个模型配置，比如同时配置 DeepSeek 和 OpenAI 作为备份。Base URL 留空默认是
-        <code>https://api.deepseek.com</code>；如果用其他兼容 OpenAI 协议的服务（Moonshot、智谱、百炼、Groq、Ollama、OpenAI），改 Base URL 和模型名即可。
-    </div>
+  <h2>三、启用和管理网站</h2>
+  <ol>
+    <li>在扩展弹窗中启用当前网站，或在侧栏设置的“网站”页添加当前域名。</li>
+    <li>可以停用或删除已添加的网站。</li>
+    <li>未授权的网站不会注册内容脚本，也不会出现字段提示、侧栏或右键菜单。</li>
+  </ol>
+  <div class="warn">
+    网页小助手的可选站点权限仅覆盖普通网页协议：<code>http://*/*</code> 和 <code>https://*/*</code>。不支持 chrome://、扩展商店、浏览器内部页面等受限页面。
+  </div>
 
-    <h2>三、启用站点（必做）</h2>
-    <ol>
-        <li>点"启用站点"tab。</li>
-        <li>在白名单文本框里每行输入一个域名，例如：
-            <pre><code>work.1688.com
-seller.douyin.com</code></pre>
-        </li>
-        <li>点"保存"。Chrome 会弹权限确认框，<strong>一定要点"允许"</strong>。</li>
-        <li>刷新目标页面，即可看到"?"按钮。</li>
-    </ol>
-    <div class="warn">
-        <strong>为什么需要授权？</strong> 本扩展默认不访问任何网站。只有你主动把站点加入白名单、Chrome 弹窗确认后，扩展才能在该站点注入脚本。这是为了保护你的隐私。
-    </div>
+  <h2>四、使用字段智能提示</h2>
+  <p>模型通过且当前站点已启用后，普通输入框、文本域、下拉框和部分组件外壳旁会出现橙色“?”。</p>
+  <ul>
+    <li>点击“?”后，扩展会读取字段标签、占位符、附近 DOM 摘要、页面标题、局部正文和知识库片段。</li>
+    <li>如果模型返回候选值，可一键填入字段。</li>
+    <li>密码、验证码、Token、邮箱、手机号、证件号、银行卡等敏感字段不会出现“?”。</li>
+  </ul>
 
-    <h2>四、知识库（可选但强烈推荐）</h2>
+  <h2>五、使用左侧 AI 助手</h2>
+  <ul>
+    <li>点击左侧入口展开对话面板。</li>
+    <li>可以直接询问当前页面、选中文本、字段含义、知识库内容。</li>
+    <li>选中文本后使用右键菜单“问 网页小助手”，会把选中文本和附近上下文带入对话。</li>
+    <li>对话记录保存在 <code>chrome.storage.session</code>，浏览器关闭后自动清除。</li>
+  </ul>
 
-    <p>知识库让 AI 回答更准确。三种建库方式：</p>
+  <h2>六、截图提问</h2>
+  <ul>
+    <li>支持可视页截图、区域截图和滚动长截图。</li>
+    <li>截图会作为附件显示在输入框旁，发送前可以预览、删除、复制或另存为。</li>
+    <li>如果默认模型未标记为支持图片理解，网页小助手不会发送图片本体，而是使用截图区域文字和 DOM 上下文。</li>
+  </ul>
 
-    <h3>方式 1：深度抓取</h3>
-    <ol>
-        <li>点"知识库"tab → "新建知识库（深度抓取）"。</li>
-        <li>填知识库名称（比如"抖店帮助文档"）。</li>
-        <li>填起始 URL（建议是站点的帮助中心首页）。</li>
-        <li>最大深度建议 2，最大页数建议 50。</li>
-        <li>公开页面选"公开抓取"；需要登录后才能看的后台页选"登录态抓取"（会带你当前浏览器 Cookie）。</li>
-        <li>点"开始抓取"，等进度条跑完。</li>
-    </ol>
+  <h2>七、本地知识库</h2>
+  <h3>学习当前页面</h3>
+  <p>在左侧面板的“页面知识”中，可以重新学习当前页面或深度采集页面。登录态页面采集会先提示确认。</p>
 
-    <h3>方式 2：采集当前渲染页面</h3>
-    <p>对抖店学堂、飞书文档这类动态渲染的 SPA 效果更好：</p>
-    <ol>
-        <li>在浏览器里打开目标页面，等内容加载完。</li>
-        <li>回到设置页，点"采集当前已渲染页面"。</li>
-    </ol>
+  <h3>导入本地文档</h3>
+  <ol>
+    <li>打开侧栏设置的“知识库”页。</li>
+    <li>填写知识库名称和关联站点 URL。</li>
+    <li>选择文件。支持 txt、md、html、json、csv、docx、pptx、pdf。</li>
+    <li>点击导入文档。文档会在浏览器本地解析并写入本地知识库。</li>
+  </ol>
 
-    <h3>方式 3：导入本地文档</h3>
-    <ol>
-        <li>"知识库"tab → "导入本地文档"卡片。</li>
-        <li>填知识库名称和关联站点 URL。</li>
-        <li>选择文件（支持 txt / md / html / json / csv / docx / pptx / pdf），可多选。</li>
-        <li>单文件 ≤ 10 MB，总大小 ≤ 20 MB。</li>
-        <li>点"导入文档"。</li>
-    </ol>
-    <div class="tip">
-        文档内容 100% 在浏览器本地解析，不会发送到任何服务器。敏感信息会自动脱敏。
-    </div>
+  <h3>管理知识库</h3>
+  <p>可以预览知识库正文、编辑名称和关联网站、启用/停用或删除知识库。列表会展示页面数、有效字符、原始字符、图片数量和质量标签等统计。</p>
 
-    <h2>五、日常使用</h2>
+  <h2>八、隐私与数据</h2>
+  <ul>
+    <li>扩展没有开发者自有服务器。</li>
+    <li>配置、模型 API Key、知识库、缓存和任务状态默认保存在 Chrome 本地存储。</li>
+    <li>只有当用户主动向 AI 提问、点击字段提示、确认发送截图或采集页面时，相关上下文才会被处理。</li>
+    <li>发送到模型和写入知识库前会尽量脱敏，但用户仍应避免采集或发送高度敏感信息。</li>
+  </ul>
 
-    <h3>字段填写建议（"?"按钮）</h3>
-    <p>在任何授权站点的表单输入框旁会看到橙色"?"按钮。点击它会弹出：</p>
-    <ul>
-        <li><strong>含义</strong>：这个字段是干什么的</li>
-        <li><strong>应填内容</strong>：格式、范围、注意事项</li>
-        <li><strong>候选值</strong>：1-3 个可直接点击填入的值</li>
-        <li><strong>参考来源</strong>：知识库中的相关页面链接</li>
-    </ul>
+  <h2>九、常见问题</h2>
+  <h3>为什么没有“?”按钮？</h3>
+  <ol>
+    <li>确认当前站点已授权。</li>
+    <li>确认默认模型已测试通过。</li>
+    <li>刷新页面。</li>
+    <li>确认字段不是密码、验证码、邮箱、手机号、Token 等敏感字段。</li>
+  </ol>
 
-    <h3>AI 助手面板</h3>
-    <p>页面右下角有一条竖边"AI 助手"，点击展开：</p>
-    <ul>
-        <li>直接在输入框里问任何和当前页面相关的问题</li>
-        <li>"全屏截图"：把整个页面作为上下文</li>
-        <li>"区域截图"：框选页面的局部作为上下文</li>
-        <li>"清空"：清空当前会话</li>
-    </ul>
-    <p>截图作为附件挂在输入框旁，发送后连同问题一起发给 AI。</p>
+  <h3>截图为什么没有作为图片发送？</h3>
+  <p>只有当默认模型配置标记为支持图片理解时，截图图片本体才会发给模型。否则会改用截图区域的文字和 DOM 上下文。</p>
 
-    <h3>右键菜单</h3>
-    <p>在页面上选中一段文字，右键 → "AI 搜索：&lt;你选的文字&gt;"，可以带上下文直接发问。</p>
+  <h3>卸载后数据怎么处理？</h3>
+  <p>卸载扩展后，Chrome 会删除扩展保存的本地数据。</p>
 
-    <h2>六、隐私保护</h2>
-    <ul>
-        <li>密码、验证码、邮箱、手机号、证件号、银行卡、Token 等字段<strong>自动跳过</strong>，不注入"?"按钮也不发送给模型。</li>
-        <li>发送给模型的文本会先脱敏：邮箱/手机号/身份证/银行卡/API Key 会被替换成占位符。</li>
-        <li>所有配置、知识库、对话记录只保存在本地浏览器。</li>
-        <li>关闭浏览器后会话级对话自动清除。</li>
-    </ul>
-
-    <h2>七、常见问题</h2>
-
-    <h3>"?"按钮没出现？</h3>
-    <ol>
-        <li>确认域名在白名单里。</li>
-        <li>确认已刷新页面（给扩展一次重新注入的机会）。</li>
-        <li>"数据"tab → 点"诊断当前活动标签页"，看输出：
-            <ul>
-                <li><code>enabled: false</code> → 去启用站点 tab 添加</li>
-                <li><code>totalInputs: 0</code> → 页面真没输入框，或都在 iframe，刷新试试</li>
-                <li><code>injected: 0</code> → 按钮被页面元素遮挡或过滤了</li>
-            </ul>
-        </li>
-        <li>密码、邮箱、手机号等<strong>敏感字段不会有按钮</strong>，这是设计如此。</li>
-    </ol>
-
-    <h3>点"?"报"未配置 API Key"？</h3>
-    <p>去"模型"tab 填 Key，点保存，再试。</p>
-
-    <h3>点"?"很久没反应？</h3>
-    <p>网络原因或模型服务有延迟。勾选"流式返回"可以看到生成过程。</p>
-
-    <h3>对话历史丢失？</h3>
-    <p>关闭浏览器时会话级对话会被清除（这是隐私设计）。如果你只是刷新页面，对话应该还在。</p>
-
-    <h3>知识库抓取失败？</h3>
-    <p>常见原因：</p>
-    <ul>
-        <li>目标站点是 SPA（单页应用），初始 HTML 为空 → 改用"采集当前已渲染页面"</li>
-        <li>需要登录 → 把抓取模式改成"登录态抓取"</li>
-        <li>被站点 robots.txt 或反爬机制拒绝 → 换起始 URL 或改用本地文档导入</li>
-    </ul>
-
-    <h3>卸载后数据怎么处理？</h3>
-    <p>Chrome 卸载扩展时会自动清空 <code>chrome.storage.local</code> 和 <code>chrome.storage.session</code>，所有本地数据会被删除。</p>
-
-    <h2>八、反馈与支持</h2>
-    <p>遇到问题或有建议，发邮件到 <a href="mailto:wangsenyan123@gmail.com">wangsenyan123@gmail.com</a>。</p>
-
+  <h2>十、支持</h2>
+  <p>问题反馈请发送邮件到 <a href="mailto:wangsenyan123@gmail.com">wangsenyan123@gmail.com</a>。</p>
 </body>
 
 </html>
