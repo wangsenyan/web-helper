@@ -56,7 +56,7 @@
     <li>未授权的网站不会注册内容脚本，也不会出现字段提示、侧栏或右键菜单。</li>
   </ol>
   <div class="warn">
-    网页小助手的可选站点权限仅覆盖普通网页协议：<code>http://*/*</code> 和 <code>https://*/*</code>。不支持 chrome://、扩展商店、浏览器内部页面等受限页面。
+    网页小助手安装时不会请求站点权限。启用站点和自定义模型 endpoint 时会按实际域名请求；截图功能因 Chrome <code>captureVisibleTab</code> 要求，会在用户主动截图时请求可选 <code>&lt;all_urls&gt;</code> 权限。不支持 chrome://、扩展商店、浏览器内部页面等受限页面。
   </div>
 
   <h2>四、使用字段智能提示</h2>

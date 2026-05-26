@@ -70,7 +70,7 @@
       <tr><td><code>tabs</code></td><td>识别当前标签页、打开后台采集标签页、记录最近网页标签以恢复上下文。</td></tr>
       <tr><td><code>unlimitedStorage</code></td><td>支持用户创建较大的本地知识库和导入文档。</td></tr>
       <tr><td><code>host_permissions: https://api.deepseek.com/*</code></td><td>调用默认示例模型服务。</td></tr>
-      <tr><td><code>optional_host_permissions: http://*/*, https://*/*</code></td><td>不在安装时请求。仅在用户主动授权站点、使用截图、页面采集或配置自定义模型 endpoint 时，按实际域名请求权限。</td></tr>
+      <tr><td><code>optional_host_permissions: &lt;all_urls&gt;</code></td><td>不在安装时请求。仅在用户主动授权站点、使用截图、页面采集或配置自定义模型 endpoint 时请求。站点启用和模型 endpoint 会按实际域名授权；截图功能因 Chrome <code>captureVisibleTab</code> 要求，会在用户主动截图时请求该可选权限。</td></tr>
     </tbody>
   </table>
 
